@@ -150,5 +150,5 @@ class TestFileStorage(unittest.TestCase):
         try:
             self.assertRaises(storage.new('jwljfef'), TypeError)
             self.assertRaises(storage.new(None), TypeError)
-        except:
+        except (SyntaxError, NameError):
             pass
