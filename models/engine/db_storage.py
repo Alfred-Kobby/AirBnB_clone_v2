@@ -34,7 +34,7 @@ class DBStorage:
         Base.MetaData.drop_all()
 
     def all(self, cls=None):
-        """Return a dictionary of objects"""
+        """Method to return a dictionary of objects"""
         my_dict = {}
         if cls in self.__classes:
             result = DBStorage.__session.query(cls)
@@ -50,19 +50,19 @@ class DBStorage:
         return my_dict
 
     def new(self, obj):
-        """Add a new object to the current database"""
+        """Method to add a new object to the current database"""
         DBStorage.__session.add(obj)
 
     def save(self):
-        """Commit all changes to the current database"""
+        """Method to commit all changes to the current database"""
         DBStorage.__session.commit()
 
     def delete(self, obj=None):
-        """Delete a new object to the current database"""
+        """Method to delete a new object to the current database"""
         DBStorage.__session.delete(obj)
 
     def reload(self):
-        """Create the current database session"""
+        """Method to create the current database session"""
         Base.metadata.create_all(self.__engine)
         session_factory = sessionmaker(bind=self.__engine,
                                        expire_on_commit=False)
@@ -70,5 +70,5 @@ class DBStorage:
         DBStorage.__session = Session()
 
     def close(self):
-        """Call remove method"""
+        """public methodto to call remove method"""
         DBStorage.__session.close()
