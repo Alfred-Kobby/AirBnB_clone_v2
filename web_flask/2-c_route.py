@@ -20,6 +20,7 @@ def hbnb():
     """Adding a specific route /hbnb"""
     return 'HBNB'
 
+
 @app.route('/c/<string:text>', strict_slashes=False)
 def text(text=None):
     """Dynamic inputed text: replace _ for space and show text"""
