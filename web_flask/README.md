@@ -11,3 +11,5 @@
 /number_template/<n>: display a HTML page only if n is an integer
 
 /number_odd_or_even/<n>: display a HTML page only if n is an integer: 
+
+/states_list: display a HTML page: (inside the tag BODY) 
