@@ -9,3 +9,5 @@
 /number/<n>: display “n is a number” only if n is an integer
 
 /number_template/<n>: display a HTML page only if n is an integer
+
+/number_odd_or_even/<n>: display a HTML page only if n is an integer: 
